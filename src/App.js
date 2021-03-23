@@ -3,14 +3,18 @@ import './App.css';
 import Home from './screens/home/home';
 import theme from './theme/theme';
 import { ThemeProvider, Typography } from '@material-ui/core';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Header from './components/header';
 
 function App() {
-    return( 
-    <ThemeProvider theme={theme}>
+    return (
+        <ThemeProvider theme={theme}>
 
-        <Typography color="primary">
-        Hi there Guys !!
-        </Typography>
+            <BrowserRouter>
+
+                <Header />
+
+            </BrowserRouter>
         </ThemeProvider>
     );
 }
