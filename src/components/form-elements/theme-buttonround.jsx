@@ -6,7 +6,7 @@ const ThemeButtonRound = ({
     bgColor, variant, value, handleClick, ...rest
 }) => {
     return (
-        <Button style={{ backgroundColor: bgColor, }} variant={variant} onClick={() => console.log('hi')}>
+        <Button style={{ backgroundColor: bgColor, }} variant={variant} onClick={() => console.log('his')}>
             {value}
         </Button>
     )
