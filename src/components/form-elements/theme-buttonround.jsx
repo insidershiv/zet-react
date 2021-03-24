@@ -1,15 +1,27 @@
-import { Button } from '@material-ui/core'
 import React from 'react'
+import { Button, makeStyles } from '@material-ui/core';
 
+const useStyles = makeStyles(theme => ({
 
-const ThemeButtonRound = ({
-    bgColor, variant, value, handleClick, ...rest
+    primaryButton: {
+        boxShadow: ' -4px -4px 10px rgba(0, 0, 0, 0.1)'
+    }
+
+}))
+
+const SecondaryButton = ({
+    label,
+    ...rest
 }) => {
+
+    const classes = useStyles();
+
+
     return (
-        <Button style={{ backgroundColor: bgColor, }} variant={variant} onClick={() => console.log('his')}>
-            {value}
+        <Button variant="contained" color="secondary" boxShadow={3} {...rest}>
+            {label}
         </Button>
-    )
+    );
 }
 
-export default ThemeButtonRound
+export default SecondaryButton;

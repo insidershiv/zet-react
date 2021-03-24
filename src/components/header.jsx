@@ -8,7 +8,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Tab, Tabs, useMediaQuery } from '@material-ui/core';
 import { Link } from 'react-router-dom'
-import ThemeButtonRound from './form-elements/theme-buttonround';
+import SecondaryButton from './form-elements/theme-buttonround';
 
 
 
@@ -41,11 +41,12 @@ export default function Header() {
 
         <>
 
-            <AppBar color="transparent" >
+            <AppBar color="transparent" mb={3}>
                 <Toolbar>
-                    <Button style={{ marginLeft: '10rem' }}>
-                        hi
-                </Button>
+
+                    <SecondaryButton label="Zetone" style={{ marginLeft: '10rem' }} />
+
+
                     <Tabs value={value} onChange={handleChange} indicatorColor="primary" className={classes.tabContainer}>
                         <Tab label="Home" component={Link} to="/" className={classes.tab} disableRipple />
                         <Tab label="About Us" component={Link} to="/about" className={classes.tab} disableRipple />
@@ -53,12 +54,16 @@ export default function Header() {
                         <Tab label="Course Structure" component={Link} to="/course" className={classes.tab} disableRipple />
                         <Tab label="FAQ" component={Link} to="/faq" className={classes.tab} disableRipple />
                         <Tab label="Apply Now" component={Link} to="/faq" className={classes.tab} disableRipple />
+
                     </Tabs>
                 </Toolbar>
 
             </AppBar>
 
-            <ThemeButtonRound value="ramesh" variant="contained" bgColor="primary" handleClick={() => console.log('Im called')} />
+
+
+
+
 
 
 

@@ -5,10 +5,10 @@ import green from '@material-ui/core/colors/green';
 let theme = createMuiTheme({
   palette: {
     primary: {
-      main: purple[500],
+      main: '#023c56',
     },
     secondary: {
-      main: green[500],
+      main: '#008080',
     },
   },
 
