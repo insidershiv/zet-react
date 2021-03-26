@@ -17,7 +17,7 @@ export default function Header() {
     const useStyles = makeStyles((theme) => ({
         tab: {
 
-            color: 'black',
+            color: 'rgba(0,0,0,.5)',
             textTransform: 'none',
             minWidth: 10
         },
@@ -39,35 +39,35 @@ export default function Header() {
 
     return (
 
-        <>
-
-            <AppBar color="transparent" mb={3}>
-                <Toolbar>
-
-                    <SecondaryButton label="Zetone" style={{ marginLeft: '10rem' }} />
 
 
-                    <Tabs value={value} onChange={handleChange} indicatorColor="primary" className={classes.tabContainer}>
-                        <Tab label="Home" component={Link} to="/" className={classes.tab} disableRipple />
-                        <Tab label="About Us" component={Link} to="/about" className={classes.tab} disableRipple />
-                        <Tab label="Fees" component={Link} to="/fees" className={classes.tab} disableRipple />
-                        <Tab label="Course Structure" component={Link} to="/course" className={classes.tab} disableRipple />
-                        <Tab label="FAQ" component={Link} to="/faq" className={classes.tab} disableRipple />
-                        <Tab label="Apply Now" component={Link} to="/faq" className={classes.tab} disableRipple />
+        <AppBar color="transparent" style={{ marginBottom: '5rem', backgroundColor: 'rgba(255, 255, 255, 0.8)' }} elevation={0}>
+            <Toolbar>
 
-                    </Tabs>
-                </Toolbar>
-
-            </AppBar>
+                <SecondaryButton label="Zetone" style={{ marginLeft: '10rem' }} />
 
 
+                <Tabs value={value} onChange={handleChange} indicatorColor="primary" className={classes.tabContainer}>
+                    <Tab label="Home" component={Link} to="/" className={classes.tab} disableRipple />
+                    <Tab label="About Us" component={Link} to="/about" className={classes.tab} disableRipple />
+                    <Tab label="Fees" component={Link} to="/fees" className={classes.tab} disableRipple />
+                    <Tab label="Course Structure" component={Link} to="/course" className={classes.tab} disableRipple />
+                    <Tab label="FAQ" component={Link} to="/faq" className={classes.tab} disableRipple />
+                    <Tab label="Apply Now" component={Link} to="/faq" className={classes.tab} disableRipple />
+
+                </Tabs>
+            </Toolbar>
+
+        </AppBar>
 
 
 
 
 
 
-        </>
+
+
+
 
     )
 }

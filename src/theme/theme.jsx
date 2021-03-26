@@ -1,7 +1,4 @@
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
-import purple from '@material-ui/core/colors/purple';
-import green from '@material-ui/core/colors/green';
-
 let theme = createMuiTheme({
   palette: {
     primary: {
@@ -11,6 +8,24 @@ let theme = createMuiTheme({
       main: '#008080',
     },
   },
+
+  typography: {
+    fontFamily: 'Raleway, sans-serif',
+
+    subtitle1: {
+      fontSize: '1.9rem',
+      color: '#a08f86',
+      fontWeight: 500,
+      lineHeight: 1.2
+    },
+    overline: {
+      lineHeight: 1.2,
+    },
+
+
+  },
+
+
 
 });
 

@@ -1,10 +1,14 @@
 import React from 'react'
 import { Button, makeStyles } from '@material-ui/core';
+import { spacing } from '@material-ui/system';
 
 const useStyles = makeStyles(theme => ({
 
-    primaryButton: {
-        boxShadow: ' -4px -4px 10px rgba(0, 0, 0, 0.1)'
+    secondaryButton: {
+        paddingLeft: '1.9rem',
+        paddingRight: '1.9rem',
+        paddingTop: '.5rem',
+        paddingBottom: '.5rem',
     }
 
 }))
@@ -17,8 +21,9 @@ const SecondaryButton = ({
     const classes = useStyles();
 
 
+
     return (
-        <Button variant="contained" color="secondary" boxShadow={3} {...rest}>
+        <Button variant="contained" color="secondary" className={classes.secondaryButton} {...rest}>
             {label}
         </Button>
     );
